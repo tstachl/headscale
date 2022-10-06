@@ -2,6 +2,6 @@ ARG EPHEMERAL_NODE_INACTIVITY_TIMEOUT LISTEN_ADDR SERVER_URL \
     DB_TYPE DB_HOST DB_PORT DB_USER DB_PASS
 
 FROM headscale/headscale:latest-alpine
-COPY config.yaml /etc/headscale
+COPY config.yaml /etc/headscale/config.yaml
 EXPOSE 8080/tcp
 CMD ["headscale", "serve"]
