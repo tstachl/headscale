@@ -1,0 +1,6 @@
+ARG PORT EPHEMERAL_NODE_INACTIVITY_TIMEOUT LISTEN_ADDR SERVER_URL \
+    DB_TYPE DB_HOST DB_PORT DB_USER DB_PASS
+
+FROM headscale/headscale:latest-alpine
+EXPOSE $PORT/tcp
+CMD ["headscale", "serve"]
